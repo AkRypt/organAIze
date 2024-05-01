@@ -1,5 +1,5 @@
 export const constants = {
     siteName: "organAIze",
-    siteUrl: "localhost:3000",
+    siteUrl: "https://organaize.vercel.app",
 }
 

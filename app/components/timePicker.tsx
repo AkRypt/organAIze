@@ -2,7 +2,7 @@ export default function TimePicker({label, value, ampmValue, onChangeHours, onCh
     return (
         <div className="flex flex-col">
         <p className="text-sm">{label}</p>
-        <div className="p-2 rounded-lg shadow bg-gradient-to-br from-base-200 via-base-100 to-base-200">
+        <div className="p-2 rounded-lg shadow bg-base-100">
             <div className="flex">
                 <select name="hours" value={value.split(":")[0]} onChange={(e) => onChangeHours(e.target.value)} 
                 className="bg-transparent appearance-none outline-none ml-1">

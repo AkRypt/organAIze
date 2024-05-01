@@ -8,7 +8,9 @@ const config: Config = {
   ],
   mode: "jit",
   daisyui: {
-    themes: ["retro", "cupcake", "winter", "acid", "cmyk", "dim", "dark"],
+    themes: ["retro", "cupcake", "winter", "acid", 
+    "cmyk", "emerald", "forest", "lemonade", "synthwave", "coffee",
+    "aqua", "garden", "pastel", "dim", "dark", "fantasy", "nord", "autumn"],
   },
   theme: {
     extend: {
