@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { generateSchedule } from "./actions";
 import TimePicker from "../components/timePicker";
 import { Loading } from "../components";
@@ -28,6 +28,7 @@ export default function Dashboard() {
 
     // { "task": "Running", "startTime": "9:00 AM", "endTime": "9:30 AM" }, { "task": "Workout", "startTime": "9:30 AM", "endTime": "10:00 AM" }, { "task": "Reading", "startTime": "10:00 AM", "endTime": "11:00 AM" }, { "task": "Coding", "startTime": "11:00 AM", "endTime": "12:00 PM" }, { "task": "Lunch Break", "startTime": "12:00 PM", "endTime": "1:00 PM" }, { "task": "Talking", "startTime": "1:00 PM", "endTime": "2:00 PM" }, { "task": "Coding", "startTime": "2:00 PM", "endTime": "3:00 PM" }, { "task": "Reading", "startTime": "3:00 PM", "endTime": "4:00 PM" }, { "task": "Wrap-up", "startTime": "4:00 PM", "endTime": "5:00 PM" }
 
+
     const fetchSchedule = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
 
@@ -44,9 +45,10 @@ export default function Dashboard() {
             setSummary(response.summary);
             setScheduleGenerated(true);
         } else {
-            // setIsError(true);
-            // console.log("inError")
-            window.location.reload();
+            setIsError(true);
+            console.log("inError")
+            alert("Something went wrong! Please try again")
+            // window.location.reload();
         }
     }
 
@@ -105,6 +107,10 @@ export default function Dashboard() {
                             <p className="text-xs font-regular text-center mt-4">
                                 You can also try adding additional details in the field to get a more personalized schedule.
                             </p>
+
+                            {isError && <p className="text-red-500 text-xs font-regular text-center mt-4">
+                                Try using words which can be understood by the AI.
+                            </p>}
 
 
                         </div>

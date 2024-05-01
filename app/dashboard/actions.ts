@@ -5,11 +5,12 @@ export async function generateSchedule({ tasks, startTime, endTime }: { tasks: a
     const system_prompt = `You are a psychologist and an expert who understands how to organize time 
     effectively in order to be really productive and you have been guiding people on making time tables for decades.`;
 
-    const user_prompt = `Generate a time table for the following tasks: ${tasks} and fit them 
+    const user_prompt = `Generate a time table for the following tasks: <tasks>${tasks}</tasks> and fit them 
     from ${startTime} to ${endTime}. Make sure to sort them as per the time of the day. 
     Your response must be in the following format and then add a small-medium length summary at the end (do not say Summary:): 
     [xz8][{"task": "Reading", "startTime": "10:00 AM", "endTime": "11:00 AM"}, {"task": "Task 2", "startTime": "12:00 PM", "endTime": "1:00 PM"}][/xz8].
-    Do not forget to include the xz8 starting and closing tags.`;
+    Do not forget to include the xz8 starting and closing tags. 
+    If you do not understand any of the words given as tasks, still include those words in the time table.`;
 
     const data = {
         "inputs": `${system_prompt}\n\n${user_prompt}`,
