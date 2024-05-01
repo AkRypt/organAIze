@@ -1,8 +1,7 @@
 'use client';
 
 import { useState } from "react";
-import { generateSchedule } from "../api/huggingface/route";
-import { logToServer } from "./actions";
+import { generateSchedule } from "./actions";
 import TimePicker from "../components/timePicker";
 import { Loading } from "../components";
 
