@@ -4,7 +4,7 @@ export default function Loading() {
             <div className="w-[80%] p-8 bg-base-100 rounded-lg flex flex-col justify-center items-center relative">
 
                 {/* Background */}
-                <div className="absolute top-0 h-full w-full rotate-180 transform bg-base-100 bg-[radial-gradient(60%_120%_at_50%_50%,hsla(0,0%,100%,0)_0,rgba(252,205,238,.5)_100%)]"></div>
+                <div className="absolute top-0 h-full w-full rotate-180 transform rounded-lg bg-base-100 bg-[radial-gradient(60%_120%_at_50%_50%,hsla(0,0%,100%,0)_0,rgba(252,205,238,.5)_100%)]"></div>
 
                 <div className="relative">
                     <p className="text-2xl font-bold text-center prose">
