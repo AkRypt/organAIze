@@ -16,7 +16,7 @@ export default function TimePicker({label, value, ampmValue, onChangeHours, onCh
                     <option value="8">8</option>
                     <option value="9">9</option>
                     <option value="10">10</option>
-                    <option value="11">10</option>
+                    <option value="11">11</option>
                     <option value="12">12</option>
                 </select>
                 <span className="text-xl mr-3">:</span>
